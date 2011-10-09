@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphicx} % image support [pdf, jpg, png]
+\usepackage{hyperref} % url link generation 
+\usepackage{fullpage} % standard 1in margin on all sides [instead of 12pt, 1.5in]
+\usepackage{textcomp} % adds latex arrow symbols
+
+\pagestyle{empty} % removes page numbering
+
+\newcommand{\key}[1]{\large{\texttt{#1}}} % large monospace key command
+\newcommand{\lkey}[1]{\LARGE{\texttt{#1}}} % large monospace key command
+
+\begin{document}
+
+% title
+\begin {center}
+  \includegraphics[width=10mm]{assets/vim-logo.png}
+  \LARGE\textbf{Vim Cheat Sheet} \\ [.5cm]
+  \small{Edward Mann} (\href{http://eddmann.com}{\texttt{http://eddmann.com}}) \\ [1cm]
+\end{center}
+
+% navigation keys
+\begin{center}
+  \begin{tabular}{cccccc}
+    & \lkey{h} & \lkey{j} & \lkey{k} & \lkey{l} & \\ [.3cm]
+    \textit{index} & \textleftarrow & \textdownarrow & \textuparrow & \textrightarrow & \textit{pinky}\\ [.7cm]
+  \end{tabular}
+\end{center}
+
+% jumping
+\begin{center}
+  \begin{tabular}{ | p{3cm} | p{7cm} | }
+    \cline{0-0}
+    Jumping \\ \hline
+    \key{0} & beginning of line \\ \hline
+    \key{\^} & 1st char of line \\ \hline
+    \key{\$} & end of line \\ \hline
+    \key{W} \textit{\key{w}} & start of word, \textit{inc. punctuation} \\ \hline
+    \key{E} \textit{\key{e}} & end of word, \textit{inc. punctuation} \\ \hline
+    \key{B} \textit{\key{b}} & back a word, \textit{inc. punctuation} \\ \hline
+  \end{tabular} \\ [1cm]
+\end{center}
+
+% inserting
+\begin{center}
+  \begin{tabular}{ | p{3cm} | p{7cm} | }
+    \cline{0-0}
+    Inserting \\ \hline
+    \key{i} & enter \textit{before} cursor \\ \hline
+    \key{a} & enter \textbf{after} cursor \\ \hline
+    \key{I} & enter at \textit{beginning} of line \\ \hline
+    \key{A} & enter at \textbf{end} of line \\ \hline
+  \end{tabular} \\ [1cm]
+\end{center}
+
+% modifying
+\begin{center}
+  \begin{tabular}{ | p{3cm} | p{7cm} | }
+    \cline{0-0}
+    Modifying \\ \hline
+    \key{o} & add line \textit{after} current one \\ \hline
+    \key{O} & add line \textbf{before} current one \\ \hline
+    \key{dd} & delete current line \\ \hline
+    \key{u} & undo command \\ \hline
+    \key{r} & redo command \\ \hline
+  \end{tabular} \\ [1cm]
+\end{center}
+
+% commands
+\begin{center}
+  \begin{tabular}{ | p{3cm} | p{7cm} | }
+    \cline{0-0}
+    Commands \\ \hline
+    \key{:w}\textit{\key{q}} & write file, \textit{and quit} \\ \hline
+    \key{:q}\textit{\key{!}} & quit, \textit{forcefully} \\ \hline
+    \key{:pwd} & displays current directory \\ \hline
+    \key{:shell} & open shell \\ \hline
+    \key{:e [file]} & edit a file in new buffer\\ \hline
+  \end{tabular}
+\end{center}
+
+\end{document}
